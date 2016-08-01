@@ -1,0 +1,96 @@
+﻿@using System.Web.Configuration
+@using Microsoft.ApplicationInsights.Extensibility
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    <script type="text/javascript">
+        var appInsights=window.appInsights||function(config) {
+            var t = { config: config }, u = document, e = window, o = "script", s = u.createElement(o), i, f;
+            function r(config) {
+                t[config] = function () {
+                    var i = arguments;
+                    t.queue.push(function () { t[config].apply(t, i) });
+                }
+            }
+            s.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js";
+            u.getElementsByTagName(o)[0].parentNode.appendChild(s);
+            try { t.cookie = u.cookie } catch (h) { }
+            for (t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; i.length;)
+                r("track" + i.pop());
+            return r("setAuthenticatedUserContext"),
+                r("clearAuthenticatedUserContext"),
+                config.disableExceptionTracking || (i = "onerror", r("_" + i), f = e[i], e[i] = function(config, r, u, e, o) {
+                    var s = f && f(config, r, u, e, o);
+                    return s !== !0 && t["_" + i](config, r, u, e, o), s;
+                }), t;
+        }({
+            instrumentationKey: "@TelemetryConfiguration.Active.InstrumentationKey",
+            url: "/Scripts/ai.0.22.19-build00125.js"
+        });
+        window.appInsights = appInsights;
+
+        if ("@Request.IsAuthenticated" === "True")
+        {
+            appInsights.setAuthenticatedUserContext("@User.Identity.Name.Replace(@"\", @"\\")".replace(/[,;=| ]+/g, "_"));
+        }
+
+        appInsights.trackPageView();
+    </script>
+</head>
+<body>
+    <div class="cvf-nav cvf-nav-left">
+        <div class="cvf-nav-bar">
+            <div class="cvf-nav-top-region">
+                <ul>
+                    <li>
+                        <div class="cvf-nav-button" data-title="Home">
+                            <span class="cvf-nav-button-icon color-blue"><i class="fa fa-windows"></i></span>
+                            <div class="cvf-nav-button-title"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cvf-nav-middle-region">
+                <ul></ul>
+            </div>
+            <div class="cvf-nav-bottom-region">
+                <ul>
+                    <li>
+                        <div class="cvf-nav-button" data-title="New">
+                            <span class="cvf-nav-button-icon"><i class="fa fa-plus color-hightlight"></i></span>
+                            <div class="cvf-nav-button-title">New</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cvf-nav-panel cvf-nav-panel-zoomout">
+            <div class="cvf-nav-panel-heading">
+                <h1></h1>
+                <div class="cvf-controls">
+                    <div class="cvf-controls-close"></div>
+                </div>
+            </div>
+            <div class="cvf-nav-panel-body"></div>
+        </div>
+    </div>
+    <div class="cvf-content">
+        <div class="cvf-content-panorama">
+            <div class="cvf-content-home">
+                @RenderBody()
+            </div>
+            <div class="cvf-content-body">
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/lib")
+    @Scripts.Render("~/bundles/cvf")
+    @Scripts.Render("~/bundles/mtools")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
