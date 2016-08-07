@@ -1,4 +1,5 @@
 using System;
+using Microsoft.Azure.CAT.Migration.Common.AzureManagement;
 using Microsoft.Azure.CAT.Migration.Web.Telemetry;
 using Microsoft.Practices.Unity;
 
@@ -37,6 +38,7 @@ namespace Microsoft.Azure.CAT.Migration.Web
 
             // TODO: Register your types here
             container.RegisterType<ITelemetryClient, TelemetryClientAdaptor>();
+            container.RegisterType<IAzureManagementClientFactory, AzureManagementClientFactory>();
         }
     }
 }

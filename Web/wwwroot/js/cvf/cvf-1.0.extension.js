@@ -79,7 +79,7 @@
                 cvf.extensions.register(this.valueOf());
             });
         } else {
-            var manifestUrl = 'wwwroot/Extensions/' + name + '/' + name + 'Extension.Manifest.xml';
+            var manifestUrl = '/Extensions/' + name + '/' + name + 'Extension.Manifest.xml';
             $.ajax({
                 url: manifestUrl,
                 dataType: 'xml',

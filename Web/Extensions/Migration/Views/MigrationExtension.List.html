@@ -1,0 +1,48 @@
+﻿<style type="text/css">
+    .subprogressbar {
+        width: 100%;
+        position: relative;
+    }
+
+        .subprogressbar .bar-small,
+        .subprogressbar .bar-big {
+            background-color: #00BCF2;
+            height: 30px;
+        }
+
+        .subprogressbar .bar-big {
+            background-color: #D9534F;
+        }
+
+        .subprogressbar span {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            line-height: 30px;
+        }
+</style>
+<div ng-app="subscriptionApp" ng-controller="SubscriptionList">
+    <table class="table table-condensed table-hover" data-table="true" data-table-paging="false" data-table-ordering="true" data-table-info="false">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Source</th>
+                <th>Source Subscription</th>
+                <th>Destination</th>
+                <th>Destination Subscription</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-class="{'cursor-pointer':true,'active':sub==currentSub}" data-cvf-focusable="true" ng-repeat="sub in subscriptions" ng-click="showDetail(sub)">
+                <td>{{sub.name}}</td>
+                <td>{{sub.status}}</td>
+                <td>{{sub.source}}</td>
+                <td>{{sub.sourceSubscription}}</td>
+                <td>{{sub.destination}}</td>
+                <td>{{sub.destinationSubscription}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

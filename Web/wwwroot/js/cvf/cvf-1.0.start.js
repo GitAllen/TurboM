@@ -6,7 +6,7 @@
     var templateCache = {}, boxs = boxs || {};
     cvf.box = cvf.box || {};
     cvf.box.create = function (option) {
-        var box = $('<div class="cvf-box"/>');
+        var box = $('<div class="cvf-box cvf-box-col2 cvf-box-row2"/>');
         if (option.col) {
             box.addClass('cvf-box-col' + option.col);
         }

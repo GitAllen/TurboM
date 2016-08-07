@@ -1,0 +1,148 @@
+﻿svg {
+    fill: white;
+}
+
+.ibiza-body {
+    overflow: hidden;
+    background-color: #2E80AB;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.ibiza-top-bar {
+    color: white;
+    background-color: #1F2328;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+    .ibiza-top-bar > header {
+        font: 20px/48px az_Regular;
+        padding: 0 15px;
+        white-space: nowrap;
+    }
+
+.ibiza-separator {
+    height: 16px;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    margin: 0 5px;
+    flex: none;
+}
+
+.ibiza-breadcrumb {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.ibiza-content {
+    position: fixed;
+    display: flex;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: stretch;
+}
+
+.ibiza-left-shell {
+    width: 225px;
+    background-color: #32383F;
+    height: 100%;
+    border-right: 1px solid #474B4F;
+    flex: none;
+    color: white;
+    z-index: 999;
+    transition: width 0.1s ease-out;
+}
+
+.ibiza-content-left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.ibiza-btn-expand {
+    flex: none;
+    margin: 10px 0;
+    height: 50px;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0;
+}
+
+    .ibiza-btn-expand:hover {
+        background-color: #474B4F;
+    }
+
+.ibiza-btn-down {
+    opacity: .9;
+    z-index: 30;
+    flex: none;
+    height: 48px;
+    color: white;
+}
+
+.ibiza-table-menu {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    padding-right: 1px;
+    color: white;
+}
+
+    .ibiza-table-menu:hover {
+        cursor: pointer;
+    }
+
+    .ibiza-table-menu tr:hover {
+        background-color: #474B4F;
+    }
+
+    .ibiza-table-menu .ibiza-logo-td {
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+        min-height: 29px;
+        line-height: 0;
+        padding: 0;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+    }
+
+    .ibiza-table-menu .ibiza-name-td {
+        padding: 0;
+        transition: opacity 0.1s ease-out;
+        height: 29px;
+        min-height: 29px;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+    }
+
+.ibiza-btn-down > .ibiza-icon {
+    width: 14px;
+    height: 14px;
+    margin: 0 10px;
+    margin-top: 18px;
+}
+
+.ibiza-btn-expand > .ibiza-icon {
+    margin-left: 17px;
+    width: 16px;
+    height: 16px;
+}
+
+.ibiza-table-menu .ibiza-icon {
+    margin-left: 17px;
+    width: 16px;
+    height: 16px;
+}

@@ -9,9 +9,12 @@ namespace Microsoft.Azure.CAT.Migration.Web
         {
             bundles.Add(new ScriptBundle("~/bundles/lib").Include(
                         "~/wwwroot/lib/jquery/dist/jquery.js",
-                        "~/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+                        "~/wwwroot/lib/datatables/media/js/jquery.dataTables.js",
                         "~/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
-                        "~/wwwroot/lib/angular/angular.js"));
+                        "~/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+                        "~/wwwroot/lib/angular/angular.js",
+                        "~/wwwroot/lib/angular-resource/angular-resource.js",
+                        "~/wwwroot/lib/morris.js/morris.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/cvf").Include(
                         "~/wwwroot/js/cvf/jquery.form.js",
@@ -28,12 +31,15 @@ namespace Microsoft.Azure.CAT.Migration.Web
                         "~/wwwroot/js/cvf/cvf-1.0.rules.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/mtools").Include(
-                       "~/wwwroot/js/site.js"));
+                       "~/extensions/app.js",
+                       "~/wwwroot/js/service/webapi.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                        "~/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
                        "~/wwwroot/lib/font-awesome/css/font-awesome.css",
+                        "~/wwwroot/lib/datatables/media/css/jquery.dataTables.css",
                        "~/wwwroot/css/cvf.css",
+                       "~/wwwroot/css/ibiza.css",
                        "~/wwwroot/css/site.css"));
         }
     }

@@ -1,15 +1,17 @@
-﻿@{
-    ViewBag.Title = "ESaaS Portal";
+﻿@using System.Web.Configuration
+@{
+    ViewBag.Title = "Global Gustomer Migration Center";
 }
 
-<div class="cvf-window cvf-minimum" data-trigger="controls" style="width: 700px;">
+<div class="cvf-window cvf-minimum" data-trigger="controls" style="width: 813px;">
     <div class="cvf-window-title" style=""></div>
     <div class="cvf-window-content" style="">
         <div class="cvf-panel cvf-loading">
             <div class="cvf-panel-heading">
-                <h1>Azure Migration Portal</h1>
+                <h1>Global Gustomer Migration Center <small>@WebConfigurationManager.AppSettings["Version"]</small></h1>
             </div>
             <div class="cvf-panel-body ">
+
             </div>
         </div>
     </div>

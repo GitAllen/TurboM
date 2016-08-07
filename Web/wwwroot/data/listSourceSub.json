@@ -1,0 +1,27 @@
+﻿[
+  {
+    "subscriptionId": "subId-000001",
+    "displayName": "Global-Sub-1",
+    "role": "Owner"
+  },
+  {
+    "subscriptionId": "subId-000002",
+    "displayName": "Global-Sub-2",
+    "role": "Owner"
+  },
+  {
+    "subscriptionId": "subId-000003",
+    "displayName": "Global-Sub-3",
+    "role": "Owner"
+  },
+  {
+    "subscriptionId": "subId-000004",
+    "displayName": "Global-Sub-4",
+    "role": "Owner"
+  },
+  {
+    "subscriptionId": "subId-000005",
+    "displayName": "Global-Sub-5",
+    "role": "Owner"
+  }
+]

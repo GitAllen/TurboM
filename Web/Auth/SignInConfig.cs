@@ -1,6 +1,6 @@
 ﻿using System.Web.Configuration;
 using Microsoft.Ajax.Utilities;
-using Microsoft.Azure.CAT.Migration.Web.Common;
+using Microsoft.Azure.CAT.Migration.Common;
 
 namespace Microsoft.Azure.CAT.Migration.Web.Auth
 {

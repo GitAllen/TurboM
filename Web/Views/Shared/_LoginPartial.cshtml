@@ -1,0 +1,45 @@
+﻿@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        <div class="cvf-user">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <div class="cvf-user-header">
+                        <div class="cvf-user-image">
+                            <img class="fxs-avatarmenu-tenant-image" height=35 src="http://azureux.azurewebsites.net/prototype/Demo/Parts/Person/Girl-1_1x1.png">
+                        </div>
+                        <div class="cvf-user-name" title="@User.Identity.Name ">@User.Identity.Name</div>
+                    </div>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="divider"></li>
+                    <li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()"><div>Sign out <i class="fa fa-sign-out color-red icon"></i></div></a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()">
+                            <div>
+                                Submit support ticket<i class="fa fa-question icon"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="cvf-user">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <div class="cvf-user-header">
+                    <div class="cvf-user-image"><i class="fa fa-user "></i></div>
+                    <div class="cvf-user-name" title="Unknown user">Unknown user</div>
+                </div>
+            </button>
+        </div>
+    </div>
+}

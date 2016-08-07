@@ -1,0 +1,51 @@
+﻿<div ng-app="addSubscriptionApp" ng-controller="addController">
+    <form role="form" enctype="multipart/form-data" method="post" action="Subscription/Add">
+        <div class="form-group">
+            <label for="subscriptionId">Subscription Id</label>
+            <input type="text" class="form-control" name="Id" id="subscriptionId" value="{{subscription.Id}}" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" data-rule-required="true" data-rule-guid="true">
+        </div>
+        <div class="form-group">
+            <label for="serviceEndpoint">Service Endpoint</label>
+            <select id="serviceEndpoint" name="ServiceEndpoint" ng-model="subscription.ServiceEndpoint" class="form-control" data-rule-required="true">
+                <option value="https://management.core.windows.net">Azure Global(WorldWide)</option>
+                <option value="https://management.core.chinacloudapi.cn">Azure China(Mooncake)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="customerName">Customer Name</label>
+            <input type="text" class="form-control" name="CustomerName" id="customerName" value="{{subscription.CustomerName}}" placeholder="Customer Name" data-rule-required="true">
+        </div>
+        <div class="form-group">
+            <label for="certFile">Certificate File</label>
+            <input type="file" id="certFile" name="certFile" class="form-control" data-rule-required="true" accept=".pfx, application/x-pkcs12">
+            <p class="help-block">Please upload certificate file(.pfx with password)</p>
+        </div>
+        <div class="form-group">
+            <label for="certPassword">Certificate File Password</label>
+            <input type="text" id="certPassword" name="certPassword" class="form-control" value="{{subscription.CertPassword}}" data-rule-required="true" placeholder="Enter Certificate file password">
+            <p class="help-block">The password of your pfx file</p>
+        </div>
+
+        <div class="form-group">
+            <label for="viewerList">Viewer List</label>
+            <table id="viewerList" class="table" data-table="true" data-table-paging="true" data-table-ordering="true" data-table-info="false">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Email</th>
+                        <th>User Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users">
+                        <td>
+                            <input type="checkbox" name="viewers" value="{{user.Id}}" ng-checked="user.isViewer" />
+                        </td>
+                        <td>{{user.Email}}</td>
+                        <td>{{user.UserName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+﻿[
+  {
+    "name": "CAT Migration 1",
+    "status": null,
+    "source": "Global",
+    "sourceSubscription": "CAT WW CRM",
+    "destination": "Azure China",
+    "destinationSubscription": "CAT China CRM"
+  },
+  {
+    "name": "CAT Migration 1",
+    "status": null,
+    "source": "Global",
+    "sourceSubscription": "CAT WW Solution Accelerator",
+    "destination": "Azure China",
+    "destinationSubscription": "CAT Mooncake Solution Acclerator"
+  }
+]

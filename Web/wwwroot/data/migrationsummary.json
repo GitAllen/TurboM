@@ -1,0 +1,88 @@
+﻿{
+  "deploymentDate": "7/20/2016 8:19:53 PM",
+  "status": "Running (4/9)",
+  "source": "Global Azure / CAT WW CRM",
+  "destination": "China Azure / CAT Mooncake CRM",
+  "migrationTargets": [
+    {
+      "vmName": "CATCRMAD",
+      "status": "OK",
+      "sourceLocation": "East Asia",
+      "destinationLocation": "China East"
+    },
+    {
+      "vmName": "CATCRMSQL",
+      "status": "In progress",
+      "sourceLocation": "East Asia",
+      "destinationLocation": "China East"
+    },
+    {
+      "vmName": "CATCRMFE01",
+      "status": "In progress",
+      "sourceLocation": "East Asia",
+      "destinationLocation": "China East"
+    },
+    {
+      "vmName": "CATCRMBE01",
+      "status": "In progress",
+      "sourceLocation": "East Asia",
+      "destinationLocation": "China East"
+    }
+  ],
+  "migrationDetails": [
+    {
+      "job": "Initial Migration",
+      "status": "OK",
+      "duration": "0:01:15",
+      "timestamp": "2016-7-20t178:57:11"
+    },
+    {
+      "job": "Provision Resource Group",
+      "status": "OK",
+      "duration": "0:00:12",
+      "timestamp": "2016-7-20t178:57:11"
+    },
+    {
+      "job": "Provision Storage Account",
+      "status": "OK",
+      "duration": "0:00:08",
+      "timestamp": "2016-7-20t178:57:11"
+    },
+    {
+      "job": "VHYD Copy",
+      "status": "In Progress (52%)",
+      "duration": "2:22:50",
+      "timestamp": "2016-7-20t178:57:11"
+    },
+    {
+      "job": "Modify Resource Configuration",
+      "status": "Not Started",
+      "duration": "",
+      "timestamp": ""
+    },
+    {
+      "job": "Deploy Resources",
+      "status": "Not Started",
+      "duration": "",
+      "timestamp": ""
+    },
+    {
+      "job": "Post Deployment Configuration",
+      "status": "Not Started",
+      "duration": "",
+      "timestamp": ""
+    },
+    {
+      "job": "Deployment Validation",
+      "status": "Not Started",
+      "duration": "",
+      "timestamp": ""
+    },
+    {
+      "job": "Clean up Migration",
+      "status": "Not Started",
+      "duration": "",
+      "timestamp": ""
+    }
+  ]
+}

@@ -4,8 +4,8 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Microsoft.Ajax.Utilities;
 using Microsoft.ApplicationInsights.DataContracts;
+using Microsoft.Azure.CAT.Migration.Common;
 using Microsoft.Azure.CAT.Migration.Web.Auth;
-using Microsoft.Azure.CAT.Migration.Web.Common;
 using Microsoft.Azure.CAT.Migration.Web.Telemetry;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 

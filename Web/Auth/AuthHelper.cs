@@ -6,7 +6,7 @@ using System.Threading;
 using System.Web;
 using System.Web.Configuration;
 using JetBrains.Annotations;
-using Microsoft.Azure.CAT.Migration.Web.Common;
+using Microsoft.Azure.CAT.Migration.Common;
 
 namespace Microsoft.Azure.CAT.Migration.Web.Auth
 {

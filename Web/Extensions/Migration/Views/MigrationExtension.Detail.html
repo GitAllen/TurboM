@@ -1,0 +1,129 @@
+﻿
+<style type="text/css">
+    #gaugesList > div {
+        display: inline-block;
+    }
+
+        #gaugesList > div:nth-child(2n+1) {
+            clear: left;
+        }
+
+    .glancebar {
+        margin-bottom: 15px;
+    }
+
+        .glancebar .glancetitle {
+            color: #525252;
+            display: block;
+            font-family: 'Segoe UI Semibold';
+            font-size: 13px;
+            margin: 0;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .glancebar .glancedescription {
+            color: #333;
+            display: block;
+            font-family: 'Segoe UI';
+            font-size: 11px;
+            margin: 0;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+            .glancebar .glancedescription a {
+                color: #2086bf;
+                cursor: auto;
+                display: inline;
+                padding: 0;
+                height: auto;
+                text-decoration: none;
+                width: auto;
+                background-color: transparent;
+            }
+
+                .glancebar .glancedescription a:hover {
+                    text-decoration: underline;
+                }
+</style>
+
+<div ng-app="subscriptionDetailApp" ng-controller="detailController">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="help-block">Summary</div>
+            <div class="glancebar">
+                <div class="glancetitle">Deployment Date</div>
+                <div class="glancedescription">{{subscription.deploymentDate}}</div>
+            </div>
+            <div class="glancebar">
+                <div class="glancetitle">Status</div>
+                <div class="glancedescription">{{subscription.status}}</div>
+            </div>
+            <div class="glancebar">
+                <div class="glancetitle">Source</div>
+                <div class="glancedescription">{{subscription.source}}</div>
+            </div>
+            <div class="glancebar">
+                <div class="glancetitle">Destination</div>
+                <div class="glancedescription">{{subscription.destination}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="help-block">Migration targets</div>
+            <table class="table" ng-app="subscriptionDetailApp" ng-controller="detailController">
+                <thead>
+                    <tr>
+                        <th>VM Name</th>
+                        <th>Status</th>
+                        <th>Source Location</th>
+                        <th>Destination Lodcation</th>
+                        <th>State</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="vm in subscription.migrationTargets">
+                        <td>
+                            <i ng-if="vm.status=='OK'" class="fa fa-check color-hightlight"></i>
+                            <i ng-if="vm.status=='In progress'" class="fa fa-spinner color-blue"></i>
+                        </td>
+                        <td>{{vm.vmName}}</td>
+                        <td>{{vm.status}}</td>
+                        <td>{{vm.sourceLocation}}</td>
+                        <td>{{vm.destinationLocation}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="help-block">Migration details</div>
+            <table class="table" ng-app="subscriptionDetailApp" ng-controller="detailController">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Job</th>
+                        <th>Status</th>
+                        <th>Duration</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="vm in subscription.migrationDetails">
+                        <td>
+                            <i ng-if="vm.status=='OK'" class="fa fa-check color-hightlight"></i>
+                            <i ng-if="vm.status=='In Progress (52%)'" class="fa fa-spinner color-blue"></i>
+                        </td>
+                        <td>{{vm.job}}</td>
+                        <td>{{vm.status}}</td>
+                        <td>{{vm.duration}}</td>
+                        <td>{{vm.timestamp}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

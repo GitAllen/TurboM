@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <extension name="MigrationExtension" baseUri="Extensions/Migration">
+    <scripts>
+      <script src="~/Scripts/MigrationExtension.New.js"></script>
+      <script src="~/Scripts/MigrationExtension.List.js"></script>
+      <script src="~/Scripts/MigrationExtension.Detail.js"></script>
+    </scripts>
+    <stylesheets>
+      <!--<stylesheet src="~/Styles/xxx.css"></stylesheet>-->
+    </stylesheets>
+    <templates>
+      <template name="new" src="~/Views/MigrationExtension.New.html"></template>
+      <template name="list" src="~/Views/MigrationExtension.List.html"></template>
+      <template name="detail" src="~/Views/MigrationExtension.Detail.html"></template>
+    </templates>
+  </extension>
+</manifest>

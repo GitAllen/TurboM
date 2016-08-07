@@ -38,7 +38,7 @@ body {
 
 .cvf-nav {
   width: 85px;
-  background-color: #1f2327;
+  background-color: #32383F;
   z-index: 201; }
   .cvf-nav .cvf-nav-bar ul {
     margin-top: 0;
@@ -199,7 +199,7 @@ body {
 
 .cvf-nav-left {
   position: fixed;
-  top: 0;
+  top: 48px;
   left: 0;
   bottom: 0;
   box-shadow: 5px 0 0 0 rgba(31, 35, 39, 0.2); }
@@ -209,7 +209,7 @@ body {
   left: 85px;
   right: 0;
   bottom: 0;
-  top: 0;
+  top: 48px;
   overflow: hidden; }
   .cvf-content .cvf-content-panorama {
     height: 100%;
@@ -697,14 +697,13 @@ body {
   margin: 21.25px;
   color: white;
   font-size: 13.33333px;
-  width: 255px;
+  width: 300px;
   cursor: pointer; }
   .cvf-user .cvf-user-header {
     height: 30px;
     line-height: 30px; }
     .cvf-user .cvf-user-header .cvf-user-name {
       font-size: 17px;
-      max-width: 180px;
       display: inline-block;
       float: right;
       padding-right: 10px;

@@ -1,0 +1,27 @@
+﻿[
+  {
+    "name": "VM001",
+    "location": "US West",
+    "resourceGroup": "MockGroup"
+  },
+  {
+    "name": "VM002",
+    "location": "US West",
+    "resourceGroup": "MockGroup"
+  },
+  {
+    "name": "VM003",
+    "location": "US West",
+    "resourceGroup": "MockGroup"
+  },
+  {
+    "name": "VM004",
+    "location": "US West",
+    "resourceGroup": "MockGroup"
+  },
+  {
+    "name": "VM005",
+    "location": "US West",
+    "resourceGroup": "MockGroup"
+  }
+]
